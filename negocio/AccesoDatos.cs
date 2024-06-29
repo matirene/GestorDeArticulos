@@ -30,6 +30,11 @@ namespace negocio
             comando.Connection = conexion;
         }
 
+        public void setParameter(string key, object value) 
+        {
+            comando.Parameters.AddWithValue(key, value);
+        }
+
         public void executeReader()
         {
             try
@@ -43,6 +48,20 @@ namespace negocio
                 throw ex;
             }
 
+        }
+
+        public void executeAction()
+        {
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public void closeConexion()

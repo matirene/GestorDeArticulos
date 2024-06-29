@@ -47,10 +47,10 @@
             // 
             // pbxDetalles
             // 
-            this.pbxDetalles.Location = new System.Drawing.Point(345, 91);
+            this.pbxDetalles.Location = new System.Drawing.Point(351, 49);
             this.pbxDetalles.Name = "pbxDetalles";
-            this.pbxDetalles.Size = new System.Drawing.Size(282, 267);
-            this.pbxDetalles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxDetalles.Size = new System.Drawing.Size(328, 328);
+            this.pbxDetalles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxDetalles.TabIndex = 0;
             this.pbxDetalles.TabStop = false;
             // 
@@ -59,6 +59,7 @@
             this.lblNombreDetalles.AutoSize = true;
             this.lblNombreDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreDetalles.Location = new System.Drawing.Point(37, 114);
+            this.lblNombreDetalles.MaximumSize = new System.Drawing.Size(300, 0);
             this.lblNombreDetalles.Name = "lblNombreDetalles";
             this.lblNombreDetalles.Size = new System.Drawing.Size(79, 24);
             this.lblNombreDetalles.TabIndex = 1;
@@ -78,7 +79,7 @@
             // 
             this.lblMarcaDetalles.AutoSize = true;
             this.lblMarcaDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcaDetalles.Location = new System.Drawing.Point(37, 262);
+            this.lblMarcaDetalles.Location = new System.Drawing.Point(37, 174);
             this.lblMarcaDetalles.Name = "lblMarcaDetalles";
             this.lblMarcaDetalles.Size = new System.Drawing.Size(62, 24);
             this.lblMarcaDetalles.TabIndex = 4;
@@ -88,7 +89,7 @@
             // 
             this.lblPrecioDetalles.AutoSize = true;
             this.lblPrecioDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioDetalles.Location = new System.Drawing.Point(37, 384);
+            this.lblPrecioDetalles.Location = new System.Drawing.Point(37, 305);
             this.lblPrecioDetalles.Name = "lblPrecioDetalles";
             this.lblPrecioDetalles.Size = new System.Drawing.Size(64, 24);
             this.lblPrecioDetalles.TabIndex = 5;
@@ -98,7 +99,7 @@
             // 
             this.lblCategoriaDetalles.AutoSize = true;
             this.lblCategoriaDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoriaDetalles.Location = new System.Drawing.Point(37, 323);
+            this.lblCategoriaDetalles.Location = new System.Drawing.Point(37, 241);
             this.lblCategoriaDetalles.Name = "lblCategoriaDetalles";
             this.lblCategoriaDetalles.Size = new System.Drawing.Size(90, 24);
             this.lblCategoriaDetalles.TabIndex = 6;
@@ -128,7 +129,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(37, 161);
+            this.label3.Location = new System.Drawing.Point(37, 342);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 20);
             this.label3.TabIndex = 9;
@@ -138,7 +139,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(37, 242);
+            this.label4.Location = new System.Drawing.Point(37, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 10;
@@ -148,7 +149,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(37, 303);
+            this.label5.Location = new System.Drawing.Point(37, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 11;
@@ -158,7 +159,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(37, 364);
+            this.label6.Location = new System.Drawing.Point(37, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 12;
@@ -168,7 +169,7 @@
             // 
             this.lblDescripcionDetalles.AutoSize = true;
             this.lblDescripcionDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionDetalles.Location = new System.Drawing.Point(37, 181);
+            this.lblDescripcionDetalles.Location = new System.Drawing.Point(37, 362);
             this.lblDescripcionDetalles.MaximumSize = new System.Drawing.Size(300, 0);
             this.lblDescripcionDetalles.Name = "lblDescripcionDetalles";
             this.lblDescripcionDetalles.Size = new System.Drawing.Size(110, 24);
@@ -179,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 438);
+            this.ClientSize = new System.Drawing.Size(715, 462);
             this.Controls.Add(this.lblDescripcionDetalles);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
