@@ -57,32 +57,37 @@
             // 
             this.lblListado.AutoSize = true;
             this.lblListado.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListado.Location = new System.Drawing.Point(20, 32);
+            this.lblListado.Location = new System.Drawing.Point(22, 26);
             this.lblListado.Name = "lblListado";
-            this.lblListado.Size = new System.Drawing.Size(221, 27);
+            this.lblListado.Size = new System.Drawing.Size(222, 27);
             this.lblListado.TabIndex = 0;
-            this.lblListado.Text = "Listado de Articulos";
+            this.lblListado.Text = "Listado de Artículos";
             // 
             // dgvListadoArticulos
             // 
+            this.dgvListadoArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListadoArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListadoArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvListadoArticulos.ColumnHeadersHeight = 4;
             this.dgvListadoArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvListadoArticulos.Location = new System.Drawing.Point(27, 246);
+            this.dgvListadoArticulos.Location = new System.Drawing.Point(27, 231);
             this.dgvListadoArticulos.MultiSelect = false;
             this.dgvListadoArticulos.Name = "dgvListadoArticulos";
             this.dgvListadoArticulos.ReadOnly = true;
             this.dgvListadoArticulos.RowHeadersVisible = false;
             this.dgvListadoArticulos.RowTemplate.Height = 38;
             this.dgvListadoArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListadoArticulos.Size = new System.Drawing.Size(762, 374);
+            this.dgvListadoArticulos.Size = new System.Drawing.Size(839, 451);
             this.dgvListadoArticulos.TabIndex = 1;
             this.dgvListadoArticulos.SelectionChanged += new System.EventHandler(this.dgvListadoArticulos_SelectionChanged);
             // 
             // pbxListadoArticulos
             // 
-            this.pbxListadoArticulos.Location = new System.Drawing.Point(835, 246);
+            this.pbxListadoArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxListadoArticulos.Location = new System.Drawing.Point(911, 266);
             this.pbxListadoArticulos.Name = "pbxListadoArticulos";
             this.pbxListadoArticulos.Size = new System.Drawing.Size(374, 374);
             this.pbxListadoArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,7 +96,8 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(27, 645);
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizar.Location = new System.Drawing.Point(27, 707);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(90, 36);
             this.btnActualizar.TabIndex = 5;
@@ -101,7 +107,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(133, 645);
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAgregar.Location = new System.Drawing.Point(134, 707);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(90, 36);
             this.btnAgregar.TabIndex = 6;
@@ -111,7 +118,8 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(240, 645);
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnModificar.Location = new System.Drawing.Point(244, 707);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(90, 36);
             this.btnModificar.TabIndex = 7;
@@ -121,7 +129,8 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(347, 645);
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminar.Location = new System.Drawing.Point(353, 707);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(90, 36);
             this.btnEliminar.TabIndex = 8;
@@ -131,7 +140,8 @@
             // 
             // btnDetalles
             // 
-            this.btnDetalles.Location = new System.Drawing.Point(457, 645);
+            this.btnDetalles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDetalles.Location = new System.Drawing.Point(462, 707);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(108, 36);
             this.btnDetalles.TabIndex = 9;
@@ -141,9 +151,10 @@
             // 
             // btnMarcas
             // 
-            this.btnMarcas.Location = new System.Drawing.Point(27, 697);
+            this.btnMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMarcas.Location = new System.Drawing.Point(666, 707);
             this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(108, 36);
+            this.btnMarcas.Size = new System.Drawing.Size(90, 36);
             this.btnMarcas.TabIndex = 10;
             this.btnMarcas.Text = "Marcas";
             this.btnMarcas.UseVisualStyleBackColor = true;
@@ -151,11 +162,12 @@
             // 
             // btnCategoria
             // 
-            this.btnCategoria.Location = new System.Drawing.Point(155, 697);
+            this.btnCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCategoria.Location = new System.Drawing.Point(776, 707);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(108, 36);
+            this.btnCategoria.Size = new System.Drawing.Size(90, 36);
             this.btnCategoria.TabIndex = 11;
-            this.btnCategoria.Text = "Categorias";
+            this.btnCategoria.Text = "Categorías";
             this.btnCategoria.UseVisualStyleBackColor = true;
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
@@ -163,7 +175,7 @@
             // 
             this.lblFiltroRapido.AutoSize = true;
             this.lblFiltroRapido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltroRapido.Location = new System.Drawing.Point(22, 91);
+            this.lblFiltroRapido.Location = new System.Drawing.Point(22, 76);
             this.lblFiltroRapido.Name = "lblFiltroRapido";
             this.lblFiltroRapido.Size = new System.Drawing.Size(99, 20);
             this.lblFiltroRapido.TabIndex = 10;
@@ -172,7 +184,7 @@
             // txtFiltroRapido
             // 
             this.txtFiltroRapido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltroRapido.Location = new System.Drawing.Point(25, 114);
+            this.txtFiltroRapido.Location = new System.Drawing.Point(25, 99);
             this.txtFiltroRapido.Name = "txtFiltroRapido";
             this.txtFiltroRapido.Size = new System.Drawing.Size(185, 26);
             this.txtFiltroRapido.TabIndex = 0;
@@ -181,9 +193,9 @@
             // btnFiltro
             // 
             this.btnFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltro.Location = new System.Drawing.Point(713, 197);
+            this.btnFiltro.Location = new System.Drawing.Point(783, 182);
             this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(75, 29);
+            this.btnFiltro.Size = new System.Drawing.Size(83, 29);
             this.btnFiltro.TabIndex = 4;
             this.btnFiltro.Text = "Filtrar";
             this.btnFiltro.UseVisualStyleBackColor = true;
@@ -192,16 +204,16 @@
             // txtFiltro
             // 
             this.txtFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(547, 197);
+            this.txtFiltro.Location = new System.Drawing.Point(584, 182);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(151, 26);
+            this.txtFiltro.Size = new System.Drawing.Size(181, 26);
             this.txtFiltro.TabIndex = 3;
             // 
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltro.Location = new System.Drawing.Point(497, 203);
+            this.lblFiltro.Location = new System.Drawing.Point(534, 188);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(44, 20);
             this.lblFiltro.TabIndex = 13;
@@ -211,7 +223,7 @@
             // 
             this.lblCampo.AutoSize = true;
             this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCampo.Location = new System.Drawing.Point(23, 203);
+            this.lblCampo.Location = new System.Drawing.Point(23, 188);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(60, 20);
             this.lblCampo.TabIndex = 16;
@@ -221,25 +233,25 @@
             // 
             this.cbxCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCampo.FormattingEnabled = true;
-            this.cbxCampo.Location = new System.Drawing.Point(88, 200);
+            this.cbxCampo.Location = new System.Drawing.Point(88, 185);
             this.cbxCampo.Name = "cbxCampo";
-            this.cbxCampo.Size = new System.Drawing.Size(155, 24);
+            this.cbxCampo.Size = new System.Drawing.Size(170, 24);
             this.cbxCampo.TabIndex = 1;
             // 
             // cbxCriterio
             // 
             this.cbxCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCriterio.FormattingEnabled = true;
-            this.cbxCriterio.Location = new System.Drawing.Point(325, 200);
+            this.cbxCriterio.Location = new System.Drawing.Point(344, 185);
             this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(155, 24);
+            this.cbxCriterio.Size = new System.Drawing.Size(170, 24);
             this.cbxCriterio.TabIndex = 2;
             // 
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
             this.lblCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCriterio.Location = new System.Drawing.Point(260, 203);
+            this.lblCriterio.Location = new System.Drawing.Point(279, 188);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(59, 20);
             this.lblCriterio.TabIndex = 18;
@@ -249,7 +261,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 169);
+            this.label1.Location = new System.Drawing.Point(23, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 19;
@@ -259,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1231, 752);
+            this.ClientSize = new System.Drawing.Size(1308, 774);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxCriterio);
             this.Controls.Add(this.lblCriterio);
@@ -284,7 +296,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestor de Articulos";
+            this.Text = "Gestor de Artículos";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxListadoArticulos)).EndInit();

@@ -38,7 +38,7 @@
             // 
             // btnEliminarCategoria
             // 
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(136, 344);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(130, 420);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(90, 36);
             this.btnEliminarCategoria.TabIndex = 10;
@@ -48,7 +48,7 @@
             // 
             // btnAgregarCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(28, 344);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(28, 420);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(90, 36);
             this.btnAgregarCategoria.TabIndex = 9;
@@ -62,9 +62,9 @@
             this.lblCategorias.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategorias.Location = new System.Drawing.Point(24, 32);
             this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(196, 22);
+            this.lblCategorias.Size = new System.Drawing.Size(198, 22);
             this.lblCategorias.TabIndex = 8;
-            this.lblCategorias.Text = "Listado de Categorias";
+            this.lblCategorias.Text = "Listado de Categorías";
             // 
             // dgvListadoCategorias
             // 
@@ -78,23 +78,24 @@
             this.dgvListadoCategorias.RowHeadersVisible = false;
             this.dgvListadoCategorias.RowTemplate.Height = 30;
             this.dgvListadoCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListadoCategorias.Size = new System.Drawing.Size(390, 249);
+            this.dgvListadoCategorias.Size = new System.Drawing.Size(488, 317);
             this.dgvListadoCategorias.TabIndex = 7;
             // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 412);
+            this.ClientSize = new System.Drawing.Size(545, 491);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.lblCategorias);
             this.Controls.Add(this.dgvListadoCategorias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Categorias";
+            this.Text = "Categorías";
             this.Load += new System.EventHandler(this.frmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoCategorias)).EndInit();
             this.ResumeLayout(false);

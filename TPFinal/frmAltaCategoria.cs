@@ -25,11 +25,11 @@ namespace TPFinal
 
             if (validacion.isEmpty(txtNombreCategoria.Text))
             {
-                MessageBox.Show("El campo Nombre esta incompleto", "Agregar Categoria", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo Nombre está incompleto.", "Agregar Categoría", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            DialogResult = MessageBox.Show("Confirmas agregar esta Categoria?", "Agregar Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult = MessageBox.Show("Confirmas agregar esta Categoría?", "Agregar Categoría", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (DialogResult == DialogResult.No)
                 return;
@@ -44,7 +44,7 @@ namespace TPFinal
 
                 categoriaNegocio.agregar(newCategoria);
 
-                MessageBox.Show("Categoria agregada", "Agregar Categoria", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Categoría agregada.", "Agregar Categoría", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)

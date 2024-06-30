@@ -119,7 +119,7 @@
             this.lblCategoriaModificar.Name = "lblCategoriaModificar";
             this.lblCategoriaModificar.Size = new System.Drawing.Size(78, 20);
             this.lblCategoriaModificar.TabIndex = 36;
-            this.lblCategoriaModificar.Text = "Categoria";
+            this.lblCategoriaModificar.Text = "Categoría";
             // 
             // cbxMarcaModificar
             // 
@@ -192,7 +192,7 @@
             this.lblDescripcionModificar.Name = "lblDescripcionModificar";
             this.lblDescripcionModificar.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcionModificar.TabIndex = 27;
-            this.lblDescripcionModificar.Text = "Descripcion";
+            this.lblDescripcionModificar.Text = "Descripción";
             // 
             // lblNombreModificar
             // 
@@ -220,7 +220,7 @@
             this.lblCodigoModificar.Name = "lblCodigoModificar";
             this.lblCodigoModificar.Size = new System.Drawing.Size(59, 20);
             this.lblCodigoModificar.TabIndex = 21;
-            this.lblCodigoModificar.Text = "Codigo";
+            this.lblCodigoModificar.Text = "Código";
             // 
             // frmModificar
             // 
@@ -247,6 +247,7 @@
             this.Controls.Add(this.lblCodigoModificar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Articulo";

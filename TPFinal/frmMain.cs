@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using negocio;
 using System.IO;
+using System.Net;
 
 namespace TPFinal
 {
@@ -41,7 +42,7 @@ namespace TPFinal
             cbxCampo.Items.Add("Código");
             cbxCampo.Items.Add("Nombre");
             cbxCampo.Items.Add("Marca");
-            cbxCampo.Items.Add("Categoria");
+            cbxCampo.Items.Add("Categoría");
             cbxCampo.SelectedIndex = 0;
 
             cbxCriterio.Items.Add("Contiene");
@@ -56,6 +57,7 @@ namespace TPFinal
             dgvListadoArticulos.Columns["Id"].Visible = false;
             dgvListadoArticulos.Columns["Descripcion"].Visible = false;
             dgvListadoArticulos.Columns["Imagen"].Visible = false;
+            dgvListadoArticulos.Columns["Precio"].Visible = false;
             dgvListadoArticulos.ColumnHeadersHeight = 40;
         }
 
@@ -67,9 +69,42 @@ namespace TPFinal
             }
             catch (Exception)
             {
-                pbxListadoArticulos.Load("https://www.smaroadsafety.com/wp-content/uploads/2022/06/no-pic.png");
+                if (CheckInternetConnection())
+                {
+                    try
+                    {
+                        pbxListadoArticulos.Load("https://www.smaroadsafety.com/wp-content/uploads/2022/06/no-pic.png");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al cargar la imagen default: " + ex.Message);
+                    }
+                } else
+                {
+                    // Manejamos la falta de conexión a internet para que no se rompa la App.
+                    Console.WriteLine("No hay conexión a internet y no se puede cargar la imagen default.");
+
+                }
+
             }
         
+        }
+
+        private bool CheckInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (var stream = client.OpenRead("http://www.google.com"))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         private void dgvListadoArticulos_SelectionChanged(object sender, EventArgs e)
@@ -98,7 +133,7 @@ namespace TPFinal
                 frmDetalles.ShowDialog();
             } else
             {
-                MessageBox.Show("No hay un articulo seleccionado para ver sus detalles", "Detalles Articulo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No hay un artículo seleccionado para ver sus detalles.", "Detalles Artículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -123,6 +158,7 @@ namespace TPFinal
 
                 try
                 {
+                    Console.WriteLine(frmModificar.ImagenAnterior);
                     if (File.Exists(frmModificar.ImagenAnterior))
                         File.Delete(frmModificar.ImagenAnterior);
                 }
@@ -134,7 +170,7 @@ namespace TPFinal
 
             } else
             {
-                MessageBox.Show("No hay un articulo seleccionado para modificar.", "Modificar Articulo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No hay un artículo seleccionado para modificar.", "Modificar Artículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -146,7 +182,7 @@ namespace TPFinal
 
                 Articulo seleccionado = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
 
-                DialogResult respuesta = MessageBox.Show("Estas seguro de eliminar el Articulo " + seleccionado.Nombre.ToUpper() + " ?", "Eliminar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("Estas seguro de eliminar el Artículo " + seleccionado.Nombre.ToUpper() + " ?", "Eliminar Artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.No)
                     return;
 
@@ -154,16 +190,23 @@ namespace TPFinal
 
                 articuloNegocio.eliminar(seleccionado);
 
-                MessageBox.Show("Articulo eliminado.", "Eliminar Articulo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Artículo eliminado.", "Eliminar Artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cargarData();
 
-                if (File.Exists(seleccionado.Imagen))
-                    File.Delete(seleccionado.Imagen);
+                try
+                {
+                    if (File.Exists(seleccionado.Imagen))
+                        File.Delete(seleccionado.Imagen);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
 
             } else
             {
-                MessageBox.Show("No hay un articulo seleccionado para eliminar.", "Eliminar Articulo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No hay un artículo seleccionado para eliminar.", "Eliminar Artículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -181,9 +224,9 @@ namespace TPFinal
 
         private void txtFiltroRapido_TextChanged(object sender, EventArgs e)
         {
-            if (txtFiltroRapido.Text.Length > 2)
+            if (txtFiltroRapido.Text.Trim().Length > 2)
             {
-                List<Articulo> listaFiltrada = listaArticulos.FindAll(articulo => articulo.Codigo.ToUpper().Contains(txtFiltroRapido.Text.ToUpper()) || articulo.Nombre.ToUpper().Contains(txtFiltroRapido.Text.ToUpper()) || articulo.Marca.Descripcion.ToUpper().Contains(txtFiltroRapido.Text.ToUpper()) || articulo.Categoria.Descripcion.ToUpper().Contains(txtFiltroRapido.Text.ToUpper()));
+                List<Articulo> listaFiltrada = listaArticulos.FindAll(articulo => articulo.Codigo.ToUpper().Contains(txtFiltroRapido.Text.Trim().ToUpper()) || articulo.Nombre.ToUpper().Contains(txtFiltroRapido.Text.Trim().ToUpper()) || articulo.Marca.Descripcion.ToUpper().Contains(txtFiltroRapido.Text.Trim().ToUpper()) || articulo.Categoria.Descripcion.ToUpper().Contains(txtFiltroRapido.Text.Trim().ToUpper()));
                 dgvListadoArticulos.DataSource = listaFiltrada; 
             } else
             {
@@ -205,7 +248,7 @@ namespace TPFinal
 
             } else
             {
-                MessageBox.Show("El filtro no puede estar vacio", "Filtro invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El filtro no puede estar vacío.", "Filtro inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -33,7 +33,7 @@ namespace TPFinal
             if (validarCampos())
                 return;
 
-            DialogResult respuesta = MessageBox.Show("Estas seguro de agregar este Articulo?", "Agregar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show("Estas seguro de agregar este Artículo?", "Agregar Artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (respuesta == DialogResult.No)
                 return;
@@ -71,7 +71,7 @@ namespace TPFinal
 
                 articuloNegocio.agregar(articuloAux);
 
-                MessageBox.Show("Articulo agregado.", "Agregar Articulo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Artículo agregado.", "Agregar Artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -169,18 +169,12 @@ namespace TPFinal
 
             if (!validacion.onlyNumbers(txtPrecioAlta.Text))
             {
-                MessageBox.Show("Solo se permiten numeros en el campo Precio.", "Campo invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Solo se permiten números en el campo Precio.", "Campo invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
 
             return false;
         }
 
-        private void txtPrecioAlta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Limita el campo a que ingresen solo numeros.
-            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
-                e.Handled = true;
-        }
     }
 }

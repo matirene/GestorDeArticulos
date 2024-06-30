@@ -54,7 +54,7 @@ namespace TPFinal
                 {
                     if (a.Marca.Descripcion.ToUpper() == seleccionada.Descripcion.ToUpper())
                     {
-                        MessageBox.Show("No se puede eliminar. Hay articulos registrados con la Marca " + seleccionada.Descripcion, "Eliminar Marca", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("No se puede eliminar. Hay articulos registrados con la Marca " + seleccionada.Descripcion + ".", "Eliminar Marca", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -63,13 +63,13 @@ namespace TPFinal
 
                 negocio.eliminar(seleccionada);
 
-                MessageBox.Show("Marca eliminada", "Eliminar Marca", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Marca eliminada.", "Eliminar Marca", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cargarMarcas();
 
             } else
             {
-                MessageBox.Show("Selecciona una Marca para eliminar", "Eliminar Marca", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selecciona una Marca para eliminar.", "Eliminar Marca", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

@@ -113,7 +113,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Código";
             // 
             // label2
             // 
@@ -133,7 +133,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 20);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Descripcion";
+            this.label3.Text = "Descripción";
             // 
             // label4
             // 
@@ -153,7 +153,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Categoria";
+            this.label5.Text = "Categoría";
             // 
             // label6
             // 
@@ -196,6 +196,7 @@
             this.Controls.Add(this.pbxDetalles);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmDetalles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalles";

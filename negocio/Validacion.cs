@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace negocio
 
         public bool onlyNumbers(string cadena)
         {
-            if (int.TryParse(cadena, out _))
+            if (decimal.TryParse(cadena, NumberStyles.Number, CultureInfo.GetCultureInfo("es-ES"), out _))
                 return true;
 
             return false;

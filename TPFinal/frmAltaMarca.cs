@@ -26,7 +26,7 @@ namespace TPFinal
 
             if (validacion.isEmpty(txtNombreMarca.Text))
             {
-                MessageBox.Show("El campo Nombre esta incompleto", "Agregar Marca", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo Nombre esta incompleto.", "Agregar Marca", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -45,7 +45,7 @@ namespace TPFinal
 
                 negocio.agregar(newMarca);
 
-                MessageBox.Show("Marca agregada", "Agregar Marca", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Marca agregada.", "Agregar Marca", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)

@@ -61,9 +61,10 @@ namespace TPFinal
                 articuloAux.Categoria = (Categoria)cbxCategoriaModificar.SelectedItem;
                 articuloAux.Precio = decimal.Parse(txtPrecioModificar.Text);
 
+                ImagenAnterior = articulo.Imagen;
+
                 if(archivo != null && !txtImagenModificar.Text.Trim().ToUpper().Contains("HTTP"))
                 {
-                    ImagenAnterior = articulo.Imagen;
 
                     string extension = Path.GetExtension(archivo.SafeFileName);
 
@@ -165,7 +166,6 @@ namespace TPFinal
             if(archivo.ShowDialog() == DialogResult.OK)
                 txtImagenModificar.Text = archivo.FileName;
         }
-
 
         private string getPath(string fileName)
         {

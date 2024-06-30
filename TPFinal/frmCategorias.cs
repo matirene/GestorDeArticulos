@@ -42,7 +42,7 @@ namespace TPFinal
         {
             if(dgvListadoCategorias.CurrentRow != null)
             {
-                DialogResult respuesta = MessageBox.Show("Confirmas eliminar esta Categoria?", "Eliminar Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult respuesta = MessageBox.Show("Confirmas eliminar esta Categoría?", "Eliminar Categoría", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (respuesta == DialogResult.No)
                     return;
@@ -56,7 +56,7 @@ namespace TPFinal
                 {
                     if(a.Categoria.Descripcion.ToUpper() == seleccionada.Descripcion.ToUpper())
                     {
-                        MessageBox.Show("No se puede eliminar. Hay articulos registrados con la Categoria " + seleccionada.Descripcion, "Eliminar Categoria", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("No se puede eliminar. Hay articulos registrados con la Categoría " + seleccionada.Descripcion + ".", "Eliminar Categoría", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -65,7 +65,7 @@ namespace TPFinal
 
                 categoriaNegocio.eliminar(seleccionada);
 
-                MessageBox.Show("Categoria eliminada", "Eliminar Categoria", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Categoría eliminada.", "Eliminar Categoría", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cargarCategorias();
             }

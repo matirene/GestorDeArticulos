@@ -59,7 +59,7 @@
             this.lblCodigoAlta.Name = "lblCodigoAlta";
             this.lblCodigoAlta.Size = new System.Drawing.Size(59, 20);
             this.lblCodigoAlta.TabIndex = 0;
-            this.lblCodigoAlta.Text = "Codigo";
+            this.lblCodigoAlta.Text = "Código";
             // 
             // txtCodigoAlta
             // 
@@ -87,7 +87,7 @@
             this.lblDescripcionAlta.Name = "lblDescripcionAlta";
             this.lblDescripcionAlta.Size = new System.Drawing.Size(92, 20);
             this.lblDescripcionAlta.TabIndex = 4;
-            this.lblDescripcionAlta.Text = "Descripcion";
+            this.lblDescripcionAlta.Text = "Descripción";
             // 
             // pbxImagenAlta
             // 
@@ -132,7 +132,6 @@
             this.txtPrecioAlta.Name = "txtPrecioAlta";
             this.txtPrecioAlta.Size = new System.Drawing.Size(231, 26);
             this.txtPrecioAlta.TabIndex = 6;
-            this.txtPrecioAlta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioAlta_KeyPress);
             // 
             // lblPrecioAlta
             // 
@@ -170,7 +169,7 @@
             this.lblCategoriaAlta.Name = "lblCategoriaAlta";
             this.lblCategoriaAlta.Size = new System.Drawing.Size(78, 20);
             this.lblCategoriaAlta.TabIndex = 14;
-            this.lblCategoriaAlta.Text = "Categoria";
+            this.lblCategoriaAlta.Text = "Categoría";
             // 
             // txtImagenAlta
             // 
@@ -248,9 +247,10 @@
             this.Controls.Add(this.lblCodigoAlta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmAltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Articulo";
+            this.Text = "Agregar Artículo";
             this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenAlta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBuscarImagenAlta)).EndInit();
