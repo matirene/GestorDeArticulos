@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,9 @@ namespace negocio
 {
     public class AccesoDatos
     {
+        private const string serverKey = "ServerName";
+        private const string databaseKey = "DatabaseName";
+
         private SqlConnection conexion;
 
         private SqlCommand comando;
@@ -19,7 +23,10 @@ namespace negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=MATIAS-PC\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true;");
+            string server = ConfigurationManager.AppSettings[serverKey];
+            string database = ConfigurationManager.AppSettings[databaseKey];
+
+            conexion = new SqlConnection($"server={server}; database={database}; integrated security=true;");
             comando = new SqlCommand();
         }
 

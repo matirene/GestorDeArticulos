@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -45,44 +46,17 @@ namespace TPFinal
             {
                 pbxDetalles.Load(imagen);
             }
-            catch (Exception)
+            catch (WebException)
             {
-                if (CheckInternetConnection())
-                {
-                    try
-                    {
-                        pbxDetalles.Load("https://www.smaroadsafety.com/wp-content/uploads/2022/06/no-pic.png");
-
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error al cargar la imagen default: " + ex.Message);
-                    }
-                }
-                else
-                {
-                    // Manejamos la falta de conexión a internet para que no se rompa la App.
-                    Console.WriteLine("No hay conexión a internet y no se puede cargar la imagen default.");
-
-                }
-
+                pbxDetalles.Image = pbxDetalles.ErrorImage;
             }
-
-        }
-
-        private bool CheckInternetConnection()
-        {
-            try
+            catch (FileNotFoundException)
             {
-                using (var client = new WebClient())
-                using (var stream = client.OpenRead("http://www.google.com"))
-                {
-                    return true;
-                }
+                pbxDetalles.Image = pbxDetalles.ErrorImage;
             }
-            catch
+            catch (DirectoryNotFoundException)
             {
-                return false;
+                pbxDetalles.Image = pbxDetalles.ErrorImage;
             }
         }
 

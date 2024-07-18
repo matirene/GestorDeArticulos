@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace TPFinal
 
         public string ImagenAnterior { get; set; }
 
+        public string ImagenActual { get; set; }
 
         public frmModificar()
         {
@@ -37,7 +39,7 @@ namespace TPFinal
         {
             cargarComboBoxs();
             cargarData();
-            pbxBuscarImgModificar.Load("https://cdn-icons-png.flaticon.com/512/1160/1160358.png");
+            cargarImagenBoton("https://cdn-icons-png.flaticon.com/512/1160/1160358.png");
         }
 
         private void btnAceptarModificar_Click(object sender, EventArgs e)
@@ -70,7 +72,7 @@ namespace TPFinal
 
                     string nuevoNombreArchivo = Path.GetFileNameWithoutExtension(archivo.SafeFileName) + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + extension;
 
-                    string path = getPath(nuevoNombreArchivo);
+                    string path = Path.Combine(CarpetaImagenesManager.FolderPath, nuevoNombreArchivo);
 
                     File.Copy(archivo.FileName, path);
 
@@ -80,6 +82,8 @@ namespace TPFinal
                 {
                     articuloAux.Imagen = txtImagenModificar.Text;
                 }
+
+                ImagenActual = articuloAux.Imagen;
 
                 ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
@@ -129,11 +133,51 @@ namespace TPFinal
         {
             try
             {
-                pbxImagenModificar.Load(imagen);
+                if (!txtImagenModificar.Text.Trim().ToUpper().Contains("HTTP"))
+                {
+                    pbxImagenModificar.Image = LoadImageCopy(imagen);
+
+                } else
+                {
+                    pbxImagenModificar.Load(imagen);
+                }
+
+            }
+            catch (WebException)
+            {
+                pbxImagenModificar.Image = pbxImagenModificar.ErrorImage;
+            }
+            catch (FileNotFoundException)
+            {
+                pbxImagenModificar.Image = pbxImagenModificar.ErrorImage;
+            }
+            catch (DirectoryNotFoundException)
+            {
+                pbxImagenModificar.Image = pbxImagenModificar.ErrorImage;
+            }
+        }
+
+        private Image LoadImageCopy(string imagePath)
+        {
+            // Crear una copia local de la imagen.
+            using (Image originalImage = Image.FromFile(imagePath))
+            {
+                // Retornar una nueva instancia (COPIA) de la imagen.
+                return new Bitmap(originalImage);
+            }
+        }
+
+
+
+        public void cargarImagenBoton(string imagen)
+        {
+            try
+            {
+                pbxBuscarImgModificar.Load(imagen);
             }
             catch (Exception)
             {
-                pbxImagenModificar.Load("https://www.smaroadsafety.com/wp-content/uploads/2022/06/no-pic.png");
+                pbxBuscarImgModificar.Image = pbxBuscarImgModificar.ErrorImage;
             }
         }
 
@@ -167,19 +211,6 @@ namespace TPFinal
                 txtImagenModificar.Text = archivo.FileName;
         }
 
-        private string getPath(string fileName)
-        {
-            string pathDirectory = Environment.CurrentDirectory;
-            string pathFather = System.IO.Directory.GetParent(pathDirectory).Parent.FullName;
-
-            string pathImagenes = Path.Combine(pathFather, "Imagenes\\");
-
-            string pathFinal = Path.Combine(pathImagenes, fileName);
-
-            return pathFinal;
-
-        }
-
         private bool validarCampos()
         {
             Validacion validacion = new Validacion();
@@ -198,5 +229,6 @@ namespace TPFinal
 
             return false;
         }
+
     }
 }

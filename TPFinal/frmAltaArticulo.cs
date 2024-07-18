@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,7 +26,7 @@ namespace TPFinal
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
             cargarComboBoxs();
-            pbxBuscarImagenAlta.Load("https://cdn-icons-png.flaticon.com/512/1160/1160358.png");
+            cargarImagenBoton("https://cdn-icons-png.flaticon.com/512/1160/1160358.png");
         }
 
         private void btnAceptarAlta_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace TPFinal
 
                     string nuevoNombreArchivo = Path.GetFileNameWithoutExtension(archivo.SafeFileName) + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + extension;
 
-                    string path = getPath(nuevoNombreArchivo);
+                    string path = Path.Combine(CarpetaImagenesManager.FolderPath, nuevoNombreArchivo); 
 
                     File.Copy(archivo.FileName, path);
 
@@ -92,9 +93,29 @@ namespace TPFinal
             {
                 pbxImagenAlta.Load(imagen);
             }
+            catch(WebException)
+            {
+                pbxImagenAlta.Image = pbxImagenAlta.ErrorImage;
+            }
+            catch (FileNotFoundException)
+            {
+                pbxImagenAlta.Image = pbxImagenAlta.ErrorImage;
+            }
+            catch (DirectoryNotFoundException)
+            {
+                pbxImagenAlta.Image = pbxImagenAlta.ErrorImage;
+            }
+        }
+
+        public void cargarImagenBoton(string imagen)
+        {
+            try
+            {
+                pbxBuscarImagenAlta.Load(imagen);
+            }
             catch (Exception)
             {
-                pbxImagenAlta.Load("https://www.smaroadsafety.com/wp-content/uploads/2022/06/no-pic.png");
+                pbxBuscarImagenAlta.Image = pbxBuscarImagenAlta.ErrorImage;
             }
         }
 
@@ -142,19 +163,6 @@ namespace TPFinal
         private void txtImagenAlta_TextChanged(object sender, EventArgs e)
         {
             cargarImagen(txtImagenAlta.Text);
-        }
-
-        private string getPath(string fileName)
-        {
-            string pathDirectory = Environment.CurrentDirectory;
-            string pathFather = System.IO.Directory.GetParent(pathDirectory).Parent.FullName;
-
-            string pathImagenes = Path.Combine(pathFather, "Imagenes\\");
-
-            string pathFinal = Path.Combine(pathImagenes, fileName);
-
-            return pathFinal;
-
         }
 
         private bool validarCampos()

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="frmCategorias.Designer.cs">
       <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguaracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguaracion.Designer.cs">
+      <DependentUpon>frmConfiguaracion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDetalles.cs">
       <SubType>Form</SubType>
@@ -107,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguaracion.resx">
+      <DependentUpon>frmConfiguaracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDetalles.resx">
       <DependentUpon>frmDetalles.cs</DependentUpon>
@@ -152,8 +162,6 @@
       <Name>negocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Imagenes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

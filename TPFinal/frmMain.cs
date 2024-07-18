@@ -17,6 +17,7 @@ namespace TPFinal
     public partial class frmMain : Form
     {
         private List<Articulo> listaArticulos;
+
         private ArticuloNegocio negocio = new ArticuloNegocio();
 
         public frmMain()
@@ -28,6 +29,7 @@ namespace TPFinal
         {
             cargarData();
             cargarComboBoxFiltro();
+            Console.WriteLine(CarpetaImagenesManager.FolderPath);
         }
 
         public void cargarData()
@@ -52,6 +54,7 @@ namespace TPFinal
 
         }
 
+
         public void ocultarColumnas()
         {
             dgvListadoArticulos.Columns["Id"].Visible = false;
@@ -61,34 +64,26 @@ namespace TPFinal
             dgvListadoArticulos.ColumnHeadersHeight = 40;
         }
 
+
         public void cargarImagen(string imagen)
         {
             try
             {
                 pbxListadoArticulos.Load(imagen);
             }
-            catch (Exception)
+            catch (WebException)
             {
-                if (CheckInternetConnection())
-                {
-                    try
-                    {
-                        pbxListadoArticulos.Load("https://www.smaroadsafety.com/wp-content/uploads/2022/06/no-pic.png");
-
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error al cargar la imagen default: " + ex.Message);
-                    }
-                } else
-                {
-                    // Manejamos la falta de conexión a internet para que no se rompa la App.
-                    Console.WriteLine("No hay conexión a internet y no se puede cargar la imagen default.");
-
-                }
-
+                pbxListadoArticulos.Image = pbxListadoArticulos.ErrorImage;
             }
-        
+            catch(FileNotFoundException)
+            {
+                pbxListadoArticulos.Image = pbxListadoArticulos.ErrorImage;
+            }
+            catch (DirectoryNotFoundException)
+            {
+                pbxListadoArticulos.Image = pbxListadoArticulos.ErrorImage;
+            }
+
         }
 
         private bool CheckInternetConnection()
@@ -156,17 +151,20 @@ namespace TPFinal
 
                 cargarData();
 
-                try
+                // Confirma si se modifico la imagen.
+                if(frmModificar.ImagenAnterior != frmModificar.ImagenActual)
                 {
-                    Console.WriteLine(frmModificar.ImagenAnterior);
-                    if (File.Exists(frmModificar.ImagenAnterior))
-                        File.Delete(frmModificar.ImagenAnterior);
+                    try
+                    {
+                        if (File.Exists(frmModificar.ImagenAnterior))
+                            File.Delete(frmModificar.ImagenAnterior);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
                 }
-                catch (Exception ex)
-                {
 
-                    MessageBox.Show(ex.ToString());
-                }
 
             } else
             {
@@ -250,6 +248,12 @@ namespace TPFinal
             {
                 MessageBox.Show("El filtro no puede estar vacío.", "Filtro inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void menuConfig_Click(object sender, EventArgs e)
+        {
+            frmConfiguaracion frmConfiguaracion = new frmConfiguaracion();
+            frmConfiguaracion.ShowDialog();
         }
     }
 }

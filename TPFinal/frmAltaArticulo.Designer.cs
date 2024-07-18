@@ -92,6 +92,7 @@
             // pbxImagenAlta
             // 
             this.pbxImagenAlta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImagenAlta.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxImagenAlta.ErrorImage")));
             this.pbxImagenAlta.Location = new System.Drawing.Point(414, 108);
             this.pbxImagenAlta.Name = "pbxImagenAlta";
             this.pbxImagenAlta.Size = new System.Drawing.Size(349, 349);
@@ -145,6 +146,7 @@
             // 
             // cbxMarcaAlta
             // 
+            this.cbxMarcaAlta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarcaAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMarcaAlta.FormattingEnabled = true;
             this.cbxMarcaAlta.Location = new System.Drawing.Point(41, 334);
@@ -154,6 +156,7 @@
             // 
             // cbxCategoriaAlta
             // 
+            this.cbxCategoriaAlta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoriaAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoriaAlta.FormattingEnabled = true;
             this.cbxCategoriaAlta.Location = new System.Drawing.Point(41, 402);
@@ -212,6 +215,8 @@
             // 
             // pbxBuscarImagenAlta
             // 
+            this.pbxBuscarImagenAlta.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxBuscarImagenAlta.ErrorImage")));
+            this.pbxBuscarImagenAlta.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbxBuscarImagenAlta.InitialImage")));
             this.pbxBuscarImagenAlta.Location = new System.Drawing.Point(293, 270);
             this.pbxBuscarImagenAlta.Name = "pbxBuscarImagenAlta";
             this.pbxBuscarImagenAlta.Size = new System.Drawing.Size(26, 26);

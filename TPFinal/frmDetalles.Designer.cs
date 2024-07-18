@@ -47,6 +47,7 @@
             // 
             // pbxDetalles
             // 
+            this.pbxDetalles.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxDetalles.ErrorImage")));
             this.pbxDetalles.Location = new System.Drawing.Point(351, 49);
             this.pbxDetalles.Name = "pbxDetalles";
             this.pbxDetalles.Size = new System.Drawing.Size(328, 328);

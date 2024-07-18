@@ -53,6 +53,7 @@
             // 
             // pbxBuscarImgModificar
             // 
+            this.pbxBuscarImgModificar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxBuscarImgModificar.ErrorImage")));
             this.pbxBuscarImgModificar.Location = new System.Drawing.Point(299, 263);
             this.pbxBuscarImgModificar.Name = "pbxBuscarImgModificar";
             this.pbxBuscarImgModificar.Size = new System.Drawing.Size(26, 26);
@@ -104,6 +105,7 @@
             // 
             // cbxCategoriaModificar
             // 
+            this.cbxCategoriaModificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoriaModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoriaModificar.FormattingEnabled = true;
             this.cbxCategoriaModificar.Location = new System.Drawing.Point(47, 395);
@@ -123,6 +125,7 @@
             // 
             // cbxMarcaModificar
             // 
+            this.cbxMarcaModificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarcaModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMarcaModificar.FormattingEnabled = true;
             this.cbxMarcaModificar.Location = new System.Drawing.Point(47, 327);
@@ -177,6 +180,7 @@
             // pbxImagenModificar
             // 
             this.pbxImagenModificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImagenModificar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbxImagenModificar.ErrorImage")));
             this.pbxImagenModificar.Location = new System.Drawing.Point(420, 101);
             this.pbxImagenModificar.Name = "pbxImagenModificar";
             this.pbxImagenModificar.Size = new System.Drawing.Size(349, 349);
