@@ -18,5 +18,8 @@ Desarrollar está aplicación me permitió poner en practica los conocimientos a
 ## Screenshots
 
 ![App Screenshot](https://i.postimg.cc/j2QxCkRG/gestordearticulos.png)
+
 ![App Screenshot](https://i.postimg.cc/xjKMKf8S/gestordearticulos2.png)
-)
+
+![App Screenshot](https://i.postimg.cc/m2mvgGQQ/gestordearticulos3.png)
+
