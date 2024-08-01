@@ -33,7 +33,6 @@
             this.dgvListadoArticulos = new System.Windows.Forms.DataGridView();
             this.pbxListadoArticulos = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.menuApp = new System.Windows.Forms.ToolStrip();
             this.menuConfig = new System.Windows.Forms.ToolStripButton();
             this.menuUser = new System.Windows.Forms.ToolStripButton();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxListadoArticulos)).BeginInit();
             this.menuApp.SuspendLayout();
@@ -102,77 +102,88 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnActualizar.Location = new System.Drawing.Point(28, 739);
+            this.btnActualizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(28, 738);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(90, 36);
+            this.btnActualizar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnActualizar.Size = new System.Drawing.Size(129, 37);
             this.btnActualizar.TabIndex = 5;
-            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregar.Location = new System.Drawing.Point(135, 739);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(90, 36);
-            this.btnAgregar.TabIndex = 6;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificar.Location = new System.Drawing.Point(245, 739);
+            this.btnModificar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(286, 737);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(90, 36);
+            this.btnModificar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnModificar.Size = new System.Drawing.Size(120, 37);
             this.btnModificar.TabIndex = 7;
-            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.Location = new System.Drawing.Point(354, 739);
+            this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(412, 737);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(90, 36);
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(108, 37);
             this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnDetalles
             // 
             this.btnDetalles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDetalles.Location = new System.Drawing.Point(463, 739);
+            this.btnDetalles.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            this.btnDetalles.Image = ((System.Drawing.Image)(resources.GetObject("btnDetalles.Image")));
+            this.btnDetalles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetalles.Location = new System.Drawing.Point(526, 737);
             this.btnDetalles.Name = "btnDetalles";
-            this.btnDetalles.Size = new System.Drawing.Size(108, 36);
+            this.btnDetalles.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnDetalles.Size = new System.Drawing.Size(108, 37);
             this.btnDetalles.TabIndex = 9;
-            this.btnDetalles.Text = "Ver Detalles";
+            this.btnDetalles.Text = "DETALLES";
+            this.btnDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDetalles.UseVisualStyleBackColor = true;
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // btnMarcas
             // 
             this.btnMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMarcas.Location = new System.Drawing.Point(667, 739);
+            this.btnMarcas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            this.btnMarcas.Location = new System.Drawing.Point(663, 737);
             this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(90, 36);
+            this.btnMarcas.Size = new System.Drawing.Size(90, 37);
             this.btnMarcas.TabIndex = 10;
-            this.btnMarcas.Text = "Marcas";
+            this.btnMarcas.Text = "MARCAS";
             this.btnMarcas.UseVisualStyleBackColor = true;
             this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
             // btnCategoria
             // 
             this.btnCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCategoria.Location = new System.Drawing.Point(777, 739);
+            this.btnCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            this.btnCategoria.Location = new System.Drawing.Point(768, 737);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(90, 36);
+            this.btnCategoria.Size = new System.Drawing.Size(99, 37);
             this.btnCategoria.TabIndex = 11;
-            this.btnCategoria.Text = "Categorías";
+            this.btnCategoria.Text = "CATEGORÍAS";
             this.btnCategoria.UseVisualStyleBackColor = true;
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
@@ -308,10 +319,27 @@
             this.menuUser.Size = new System.Drawing.Size(23, 31);
             this.menuUser.Text = "Usuario";
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAgregar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(172, 737);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnAgregar.Size = new System.Drawing.Size(108, 37);
+            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1308, 798);
             this.Controls.Add(this.menuApp);
             this.Controls.Add(this.label1);
@@ -355,7 +383,6 @@
         private System.Windows.Forms.DataGridView dgvListadoArticulos;
         private System.Windows.Forms.PictureBox pbxListadoArticulos;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalles;
@@ -374,6 +401,7 @@
         private System.Windows.Forms.ToolStrip menuApp;
         private System.Windows.Forms.ToolStripButton menuConfig;
         private System.Windows.Forms.ToolStripButton menuUser;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
 
