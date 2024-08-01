@@ -44,7 +44,13 @@ namespace TPFinal
         {
             try
             {
-                pbxDetalles.Load(imagen);
+                if (!imagen.Trim().ToUpper().Contains("HTTP"))
+                {
+                    pbxDetalles.Image = LoadImageCopy(imagen);
+                } else
+                {
+                    pbxDetalles.Load(imagen);
+                }
             }
             catch (WebException)
             {
@@ -57,6 +63,16 @@ namespace TPFinal
             catch (DirectoryNotFoundException)
             {
                 pbxDetalles.Image = pbxDetalles.ErrorImage;
+            }
+        }
+
+        private Image LoadImageCopy(string imagePath)
+        {
+            // Crear una copia local de la imagen.
+            using (Image originalImage = Image.FromFile(imagePath))
+            {
+                // Retornar una nueva instancia (COPIA) de la imagen.
+                return new Bitmap(originalImage);
             }
         }
 
